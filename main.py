@@ -1,13 +1,12 @@
-# requires Node.js (>= 18), npm install -g @llamaindex/liteparse
 from liteparse import LiteParse
+import time
 
-# Create parser
+start_time = time.time()
+
 parser = LiteParse()
+result = parser.parse("AI Module 1.pdf")
 
-# Parse a document
-result = parser.parse("test_pdf.pdf")
-print(result.text)
+with open("output.txt", "w", encoding="utf-8") as f:
+    f.write("\n".join(page.text for page in result.pages))
 
-# Access structured data
-for page in result.pages:
-    print(f"Page {page.pageNum}: {len(page.textItems)} text items")
+print(f"⏰ Time taken: {time.time()-start_time:.2f}s")
