@@ -3,7 +3,7 @@ import time
 
 start_time = time.time()
 
-pdf_doc = "Project Proposal.pdf"
+pdf_doc = "An Overview of AI in Computer Assisted Language Learning.pdf"
 pdf_doc_name = pdf_doc.split(".")[0].strip()
 
 parser = LiteParse()

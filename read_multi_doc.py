@@ -2,8 +2,8 @@ import os
 from liteparse import LiteParse
 from tqdm import tqdm  # progress bar
 
-input_folder = "ML_chapter"
-output_folder = "ML_parsed"
+input_folder = "Research Articles"
+output_folder = "Research Articles PARSED"
 
 os.makedirs(output_folder, exist_ok=True)
 
